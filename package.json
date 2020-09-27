@@ -1,0 +1,19 @@
+{
+  "name": "subset-sum-pisinger",
+  "version": "1.0.0",
+  "description": "Implements Pisinger's 2004 algorithm that provides a linear time solution to subset sum when input is only positive integers and the target sum is a positive constant C that is greater than or equal to each integer in the set.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thorpep138/subset-sum-pisinger.git"
+  },
+  "author": "Peter Thorpe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thorpep138/subset-sum-pisinger/issues"
+  },
+  "homepage": "https://github.com/thorpep138/subset-sum-pisinger#readme"
+}
