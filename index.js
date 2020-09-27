@@ -2,7 +2,6 @@ const ensureWeightsAndCapacityAreValid = require('./validators/ensureWeightsAndC
 const getSplitItemAndInitialSolution = require('./util/subsetSum/getSplitItemAndInitialSolution');
 const getSolutionForNoSplitItem = require('./util/subsetSum/getSolutionForNoSplitItem');
 const setGridValue = require('./util/subsetSum/setGridValue');
-const printGrid = require('./util/subsetSum/printGrid');
 
 function subsetSum({ weights, capacity }) {
     ensureWeightsAndCapacityAreValid({ weights, capacity });
