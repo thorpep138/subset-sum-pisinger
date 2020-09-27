@@ -10,7 +10,10 @@ function getSplitItemAndInitialSolution({ weights, capacity }) {
         }
     }
     
-    return null;
+    return {
+        s: null,
+        w_carrot: null
+    }
 }
 
 module.exports = getSplitItemAndInitialSolution;
