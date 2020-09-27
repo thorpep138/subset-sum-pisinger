@@ -58,14 +58,4 @@ function subsetSum({ weights, capacity }) {
         : { solutionExists: false };
 }
 
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 15 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 200 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 10 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 9 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 6 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 13 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 18 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 22 }));
-console.log(subsetSum({ weights: [6, 4, 2, 6, 4, 3], capacity: 25 }));
-
 module.exports = subsetSum;

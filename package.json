@@ -4,7 +4,7 @@
   "description": "Implements Pisinger's 2004 algorithm that provides a linear time solution to subset sum when input is only positive integers and the target sum is a positive constant C that is greater than or equal to each integer in the set.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/thorpep138/subset-sum-pisinger/issues"
   },
-  "homepage": "https://github.com/thorpep138/subset-sum-pisinger#readme"
+  "homepage": "https://github.com/thorpep138/subset-sum-pisinger#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
+  }
 }
