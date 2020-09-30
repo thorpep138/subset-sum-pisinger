@@ -1,8 +1,17 @@
-function setGridValue({ grid, primaryIndex, secondaryIndex, value }) {
+function setGridValue({ grid, primaryIndex, secondaryIndex, value, parent }) {
     if (!grid[primaryIndex]) {
         grid[primaryIndex] = {}
     };
-    grid[primaryIndex][secondaryIndex] = value;
+    if (!grid[primaryIndex][secondaryIndex]) {
+        grid[primaryIndex][secondaryIndex] = {};
+    }
+    grid[primaryIndex][secondaryIndex].value = value;
+    if (parent) {
+        grid[primaryIndex][secondaryIndex].parent = {
+            primaryIndex: parent.primaryIndex,
+            secondaryIndex: parent.secondaryIndex
+        }
+    }
 }
 
 module.exports = setGridValue;

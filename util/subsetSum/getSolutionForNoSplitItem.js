@@ -8,7 +8,8 @@ function getSolutionForNoSplitItem({ weights, capacity }) {
         };
     } else {
         return {
-            solutionExists: false
+            solutionExists: false,
+            solution: null
         }
     }
 }
