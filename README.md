@@ -8,7 +8,7 @@ Implements Pisinger's 2004 algorithm that provides a linear time, iterative solu
 - Error Handling
 
 ### Formal Algorithm Description
-Given a set ![formula](https://render.githubusercontent.com/render/math?math=N=\{1,...,%20n\}) of n items with positive integer weights w1,..., w n and a capacity c, the subset sum problem (SSP) is to find a subset of N such that the corresponding total weight is maximized without exceeding the capacity c. Recall the formal definition as introduced in Section 1.2:
+Given a set $N=\{1, ... n\}$
 ### Installation
 
 ### Testing
