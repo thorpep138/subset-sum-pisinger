@@ -11,7 +11,7 @@
     "url": "git+https://github.com/thorpep138/subset-sum-pisinger.git"
   },
   "author": "Peter Thorpe",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/thorpep138/subset-sum-pisinger/issues"
   },
