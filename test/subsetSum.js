@@ -383,6 +383,16 @@ describe("When solution does not exist", function() {
 });
 
 describe("When input is invalid exist", function() {
+    describe("When weights are [] and capacity is 4", function() {
+        it("throws subset sum input error: Input array contains invalid elements", function() {
+            expect(() => subsetSum({ 
+                weights: [],
+                capacity: 4 })).to
+                .throw("Array [] is empty")
+                .and.be.an.instanceof(SubsetSumInputError);
+        });
+    });
+
     describe("When weights are [1, -2, 3] and capacity is 4", function() {
         it("throws subset sum input error: Input array contains invalid elements", function() {
             expect(() => subsetSum({ 
