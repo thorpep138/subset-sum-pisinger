@@ -1,4 +1,5 @@
 const subsetSum = require('../index');
+const SubsetSumInputError = require('../errors/SubsetSumInputError');
 const expect = require("chai").expect;
 
 describe("When solutions exist", function() {
@@ -377,6 +378,48 @@ describe("When solution does not exist", function() {
                     capacity: 43 })
                 .solutionExists).to.equal(false);
             });
+        });
+    });
+});
+
+describe("When input is invalid exist", function() {
+    describe("When weights are [1, -2, 3] and capacity is 4", function() {
+        it("throws subset sum input error: Input array contains invalid elements", function() {
+            expect(() => subsetSum({ 
+                weights: [1, -2, 3],
+                capacity: 4 })).to
+                .throw("Input array contains invalid elements")
+                .and.be.an.instanceof(SubsetSumInputError);
+        });
+    });
+
+    describe("When weights are [1, 'b', 2] and capacity is 2", function() {
+        it("throws subset sum input error: Input array contains invalid elements", function() {
+            expect(() => subsetSum({ 
+                weights: [1, 'b', 2],
+                capacity: 2 })).to
+                .throw("Input array contains invalid elements")
+                .and.be.an.instanceof(SubsetSumInputError);
+        });
+    });
+
+    describe("When weights are [1, 2, 2] and capacity is 1", function() {
+        it("throws subset sum input error: Weight 2 exceeds the capacity", function() {
+            expect(() => subsetSum({ 
+                weights: [1, 2, 2],
+                capacity: 1 })).to
+                .throw("Weight 2 exceeds the capacity")
+                .and.be.an.instanceof(SubsetSumInputError);
+        });
+    });
+
+    describe("When weights are [1, 2, 2] and capacity is 'a'", function() {
+        it("throws subset sum input error: Weight 2 exceeds the capacity", function() {
+            expect(() => subsetSum({ 
+                weights: [1, 2, 2],
+                capacity: 'a' })).to
+                .throw("Expected integer value but got a instead")
+                .and.be.an.instanceof(SubsetSumInputError);
         });
     });
 });
